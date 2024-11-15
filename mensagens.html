@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem do Dia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Romântico -->
+    <header class="header">
+        <h1>💌 Mensagem do Dia</h1>
+        <p>Uma mensagem especial para cada dia...</p>
+    </header>
+
+    <!-- Seção de Mensagem do Dia -->
+    <section class="mensagem-section">
+        <div class="mensagem-container">
+            <h2>Mensagem de Hoje ❤️</h2>
+            <p id="mensagem-do-dia"></p>
+        </div>
+    </section>
+
+<!-- Barra de Navegação -->
+<nav class="bottom-nav">
+    <div class="nav-item">
+        <a href="index.html" target="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670159.png" alt="Home">
+        </a>
+    </div>
+    <div class="nav-item">
+        <a href="mensagens.html" target="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/4490/4490029.png" alt="Galeria">
+        </a>
+    </div>
+    <div class="nav-item">
+        <a href="mens.html" target="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/14112/14112363.png" alt="Surpresas">
+        </a>
+    </div>
+</nav>
+
+    <!-- JavaScript para Mensagem do Dia -->
+    <script>
+        const mensagens = [
+            "Hoje é um novo dia para amar e ser amado(a). ❤️",
+            "Você é a razão do meu sorriso todos os dias. 😊",
+            "Cada momento ao seu lado é inesquecível. 💕",
+            "Você é meu lugar favorito em todo o mundo. 🌍",
+            "Nosso amor é eterno e inquebrável. 💖",
+            "Você é a luz que ilumina meu caminho. ✨",
+            "Prometo te amar hoje e sempre. 💍",
+            "Agradeço por cada abraço, cada beijo e cada olhar. 🥰",
+            "Nosso amor cresce a cada dia, assim como minha admiração por você. 🌹",
+            "Meu coração é seu, agora e para sempre. 💗",
+            "Você me completa de uma forma que eu nunca imaginei. 💫",
+            "Nossa história é a mais linda que já foi escrita. 📖",
+            "Amar você é o melhor presente que a vida me deu. 🎁",
+            "Com você, eu encontrei o meu lar. 🏡",
+            "Você faz meu mundo mais colorido e feliz. 🌈",
+            "Estar ao seu lado é um sonho que se tornou realidade. ✨"
+        ];
+
+        const dataAtual = new Date();
+        const indiceMensagem = dataAtual.getDate() % mensagens.length;
+        document.getElementById('mensagem-do-dia').textContent = mensagens[indiceMensagem];
+    </script>
+
+</body>
+</html>
